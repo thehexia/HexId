@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C#: HexId Debug",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/src/HexId.IdentityServer/HexId.IdentityServer.csproj"
+        },
+        {
+            "name": "C#: ExampleApi [Default Configuration]",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/examples/ExampleApi/ExampleApi.csproj",
+        },
+        {
+            "name": "C#: ExampleApiClient",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/examples/ExampleApiConsoleClient/ExampleApiConsoleClient.csproj",
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Id + ExampleApi",
+            "configurations": ["C#: ExampleApi [Default Configuration]", "C#: HexId Debug"],
+            "stopAll": true
+        }
+    ]
+}
